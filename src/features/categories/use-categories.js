@@ -6,9 +6,13 @@ export const useCategoriesAll = () => {
 	const dispatch = useDispatch()
 	const { categoriesAll } = useSelector(selectCategories)
 
-	useEffect(() => {
+const quantity = categoriesAll.length
+
+useEffect(() => {
+		if (!quantity) {
 			dispatch(loadAllCategories())
-	}, [])
+		}
+	}, [dispatch,quantity])
 
 	return categoriesAll
 }

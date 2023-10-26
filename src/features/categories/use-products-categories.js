@@ -16,7 +16,8 @@ const { status, error } = useSelector(
 
 		const dispatch = useDispatch()
 		useEffect(() => {
-				dispatch(loadProductsByCategories(idCategory))
+			dispatch(loadProductsByCategories(idCategory))
 			}, [idCategory,dispatch])
+
 return [productsByCategories, { status, error }]
 }

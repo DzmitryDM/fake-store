@@ -13,19 +13,12 @@ export const loadProducts = createAsyncThunk(
 	}
 )
 
-export const loadCurrentProduct = createAsyncThunk(
-	'@@products/load-current-product',
-	async (id, { extra: { client, api } }) => {
-		return client.get(api.singleProductById(id))
-	}
-)
 
 //Slice
 const initialState = {
 	status: 'idle',
 	error: null,
 	list: [],
-	product: {},
 }
 
 const productsSlice = createSlice({
@@ -45,10 +38,7 @@ const productsSlice = createSlice({
 			state.status = 'received'
 			state.list = payload.data
 		})
-		builder.addCase(loadCurrentProduct.fulfilled, (state, { payload }) => {
-			state.status = 'received'
-			state.product = payload.data
-		})
+		
 	},
 })
 

@@ -6,8 +6,8 @@ import Root from './routes/Root'
 import Home from './routes/Home'
 import Products from './routes/Products'
 import { Provider } from 'react-redux'
-import {store} from './app/store'
-import SingleProduct from './features/products/SingleProduct'
+import { store } from './app/store'
+import SingleProduct from './features/single-products/SingleProduct'
 
 const router = createBrowserRouter([
 	{
@@ -22,20 +22,17 @@ const router = createBrowserRouter([
 			{
 				path: '/products/:idCategory',
 				element: <Products />,
-				children: [
-					{
-						path: '/products/:idCategory/singleProduct/:idProduct',
-						element: <SingleProduct />,
-					},
-				],
+			},
+			{
+				path: '/products/:idCategory/singleProduct/:idProduct',
+				element: <SingleProduct />,
 			},
 		],
 	},
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-		<Provider store={store}>
-			<RouterProvider router={router} />
-		</Provider>
-
+	<Provider store={store}>
+		<RouterProvider router={router} />
+	</Provider>
 )

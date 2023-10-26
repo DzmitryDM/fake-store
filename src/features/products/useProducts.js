@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
-  loadProducts,
+	loadProducts,
 	selectProducts,
 	selectStatusProducts,
 } from './../../features/products/products-slice'
@@ -15,8 +15,7 @@ export const useProducts = () => {
 		if (!quantity) {
 			dispatch(loadProducts())
 		}
-	}, [quantity, dispatch])
-	
+	}, [dispatch,quantity])
 
-  return [products,{status,error}]
+	return [products, { status, error }]
 }
