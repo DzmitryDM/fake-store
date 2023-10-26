@@ -1,0 +1,48 @@
+.grid_wraper {
+	display: grid;
+	grid-template:
+		'sidebar home '
+		'related related ';
+	grid-template-columns: 0.98fr 4.1fr;
+	margin-bottom: 1rem;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	background-color: var(--colors-bg);
+	padding: 1rem;
+	line-height: 2.3rem;
+	border-radius: 0.7rem;
+	font-size: 25px;
+}
+.sidebar_color{
+	color:var(--colors-text);
+}
+.active{
+color:var(--colors-bt)
+}
+.home {
+	grid-area: home;
+	position: relative;
+	padding-left: 0.8rem;
+}
+.main_images {
+	width: 100%;
+	height: auto;
+}
+.images {
+	position: absolute;
+	max-width: 30rem;
+	bottom: -0.8rem;
+	right: 5rem;
+}
+@media (max-width: 1020px) {
+	.images {
+		max-width: 20rem;
+	}
+}
+.images2 {
+	max-width: 100%;
+	height: auto;
+}
+

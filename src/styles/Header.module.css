@@ -1,0 +1,51 @@
+header {
+	padding: 2rem 1.3rem;
+	color: var(--colors-text);
+	background-color: var(--colors-ui-base);
+	box-shadow: var(--shadow);
+	margin-bottom: 1.9rem;
+}
+.logo {
+	max-width: 304px;
+}
+.flex_header {
+	display: flex;
+	justify-content: space-between;
+	justify-items: center;
+	align-items: center;
+}
+.input_wrapper {
+	border-radius: 0.7rem;
+	background-color: var(--colors-bg);
+padding: 0.3rem;
+display: flex;
+box-shadow: var(--shadow);
+}
+.search{
+	 width: 20px;
+	 height: 20px;
+	opacity: 0.6;
+}
+.input {
+	background-color: var(--colors-bg);
+	font-family: Montserrat, Roboto, sans-serif;
+	background-color: none;
+	border: none;
+	outline: none;
+	padding: 0 1rem;
+	color: var(--colors-text);
+	align-content: center;
+	line-height: 1.7rem;
+	width: 100%;
+}
+.user_profile{
+
+}
+
+.email{
+	
+}
+
+.theme{
+	cursor: pointer;
+}
